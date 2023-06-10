@@ -6,10 +6,9 @@ export default withMT({
   theme: {
     extend: {
       colors: {
-        primary: " #00295F",
-        secondary: "#F0F3D1",
-        third: "#F09393",
-        fourth: "#8A8D91",
+        primary: "#222222",
+        secondary: "#fabf09",
+        tertiary: "#fabf09",
       },
       screens: {
         md: "500px",
@@ -17,7 +16,8 @@ export default withMT({
       },
     },
     fontFamily: {
-      sans: ["Poppins", "sans-serif"],
+      sans: ["Inter", "sans-serif"],
+      serif: ["Inter", "serif"],
     },
   },
   plugins: [],
