@@ -12,13 +12,8 @@ const Employee: React.FC<{ index: number; employee: Partial<EmployeeType> }> = (
       <div className='mb-3  flex w-full flex-row  gap-5 '>
         <p className='font-black self-center'> {index} </p>
         <img
-          src={
-            // shoudDisplayDefaultImage(employee.photo)
-            //   ? avatarGirl2
-            //   : apiBaseUrl + '/public/image/' + employee.photo
-            '/public/image/' + employee.photo
-          }
-          className='h-14 w-14 rounded-full border-2 border-black bg-white'
+          src='./images/employee.png' 
+          className='h-16 w-16 rounded-full border-2 border-black bg-white'
         ></img>
         <span className='self-center font-black'>{employee.fullName}</span>
         <span className='self-center flex-grow text-right'>{employee.score}</span>
