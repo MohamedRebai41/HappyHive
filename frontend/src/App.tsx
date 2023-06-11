@@ -1,13 +1,18 @@
-import Events from './pages/Events';
-
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import MainLayout from "./layouts/MainLayout";
+import Home from "./pages/Home";
 
 function App() {
 
   return (
-    <>
-      {/* <div className="w-200 h-200 bg-secondary"></div> */}
-      <Events/>
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<MainLayout />}>
+          <Route index element={<Home />} />
+          {/* <Route path="favorite" element={<Favorite />} /> */}
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 
