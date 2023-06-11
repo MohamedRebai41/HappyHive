@@ -5,6 +5,7 @@ import Events from "./pages/Events";
 import Leaderboard from "./pages/Leaderboard";
 import Store from "./pages/Store";
 import QrScanner from "./components/QrScanner";
+import Gift from "./components/Gift";
 
 function App() {
 
@@ -18,6 +19,7 @@ function App() {
           <Route path="store" element={<Store />} />
           <Route path="leaderboared" element={<Leaderboard />} />
           <Route path="qrscanner" element={<QrScanner />} />
+          <Route path="gift" element={<Gift/>}/>
         </Route>
       </Routes>
     </BrowserRouter>
