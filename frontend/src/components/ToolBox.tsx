@@ -2,6 +2,7 @@ import {BsThreeDots} from 'react-icons/bs'
 import {BsQrCode,BsGift} from 'react-icons/bs'
 import {BiMessageRounded} from 'react-icons/bi'
 import {useState} from 'react'
+import Gift from './Gift'
 import { Link } from 'react-router-dom'
 
 
@@ -9,6 +10,7 @@ export default function ToolBox() {
     const [show,setShow] = useState("");
     const [show2,setShow2] = useState("");
     const [show3,setShow3] = useState("");
+    const [popup,setPopup] = useState(false);
     const showMenu = () => {
         if(show === ""){
             setShow(" -translate-y-20");
@@ -19,6 +21,11 @@ export default function ToolBox() {
             setShow2("");
             setShow3("");
         }
+    }
+    const showGift = () => {
+        console.log("show gift");
+        popup ? setPopup(false) : setPopup(true);
+        showMenu();
     }
 
     return (
@@ -33,7 +40,7 @@ export default function ToolBox() {
             </div>
             </Link>
             <div className={"w-12 h-12 bg-primary flex flex-col justify-center items-center text-center rounded-full absolute right-0 bottom-0 ease-in-out duration-150" + show2}
-            onClick={showMenu}
+            onClick={showGift}
             >
                 <BsGift className="text-3xl text-secondary"/>
             </div>
@@ -50,6 +57,7 @@ export default function ToolBox() {
             </div>
         </div>
         </div>
+        {popup && <Gift/>}
         </>
     );
     
