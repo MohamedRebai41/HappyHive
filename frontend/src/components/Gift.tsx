@@ -1,4 +1,5 @@
 import {BsGift} from 'react-icons/bs'
+import employees from '../data/EmployeeData';
 
 function Gift(){
     return(
@@ -8,11 +9,15 @@ function Gift(){
                 <div className="m-4">
                     <label className="text-3xl text-secondary">Choose Employee</label>
                 </div>
-                <div className="m-4">
-                    <select>
+                <div >
+                    <select className="mb-4 w-[95%] h-12 rounded-md bg-white">
+                        <option></option>
+                        {employees.map((employee) => (
+                            <option className='' key={employee.id} value={employee.id}>{employee.fullName}</option>
+                        ))}
                     </select>
                 </div>
-                <div className="flex m-2">
+                <div className=" m-2">
                     <input className="w-full h-12 px-2.5 rounded-md border-solid border-2" type="text" placeholder="Enter a message"/>
                 </div>
                 <div className="m-4">
