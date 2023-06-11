@@ -16,7 +16,7 @@ import { Suggestion } from './Suggestion';
 import { Badge } from './Badge';
 
 @Entity()
-export class User extends BaseEntity {
+export class User {
   @PrimaryGeneratedColumn()
   id: number;
 

@@ -43,6 +43,7 @@ export class ItemService {
 
     if (item && user) {
       user.purchases.push(item);
+      user.coins -= item.price;
       await this.userService.updateUser(user);
     }
   }

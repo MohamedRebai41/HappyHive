@@ -11,6 +11,13 @@ import { Badge } from './Entities/Badge';
 import { Report } from './Entities/Report';
 import { Event } from './Entities/Event';
 
+import { EventModule } from './Event/event.module';
+import { UserModule } from './User/user.module';
+import { ItemModule } from './Item/item.module';
+import { GiftModule } from './Gift/gift.module';
+import { QueryRunnerProviderAlreadyReleasedError } from 'typeorm';
+import { UserService } from './User/user.service';
+
 @Module({
   imports: [
     TypeOrmModule.forRoot({
@@ -22,9 +29,11 @@ import { Event } from './Entities/Event';
       database: 'happy-hive',
       entities: [User, Item, Gift, Report, Suggestion, Event, UserEvent, Badge],
       synchronize: true
-    })
-  ],
-  controllers: [AppController],
-  providers: [AppService]
+    }),
+    EventModule,
+    UserModule,
+    ItemModule,
+    GiftModule
+  ]
 })
 export class AppModule {}
