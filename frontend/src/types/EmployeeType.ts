@@ -1,4 +1,4 @@
- type EmployeeType ={
+type EmployeeType ={
 photo: string;
 fullName: string;
 id: string;
