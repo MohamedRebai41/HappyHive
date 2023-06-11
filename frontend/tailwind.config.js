@@ -8,7 +8,7 @@ export default withMT({
       colors: {
         primary: "#222222",
         secondary: "#fabf09",
-        tertiary: "#fabf09",
+        tertiary: "#e3e6e6",
       },
       screens: {
         md: "500px",
