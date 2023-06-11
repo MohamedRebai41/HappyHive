@@ -4,7 +4,7 @@ import Event from "../components/Event";
 export default function Events() {
     return(
         <div>
-            <div className="flex flex-col items-center justify-between bg-tertiary">
+            <div className="flex flex-col items-center justify-between bg-tertiary mt-16 mb-10">
                     <div className="h-1/5 text-primary font-black text-4xl m-5 mb-10">
                         Upcoming Events
                     </div>
