@@ -2,6 +2,7 @@ import {BsThreeDots} from 'react-icons/bs'
 import {BsQrCode,BsGift} from 'react-icons/bs'
 import {BiMessageRounded} from 'react-icons/bi'
 import {useState} from 'react'
+import { Link } from 'react-router-dom'
 
 
 export default function ToolBox() {
@@ -24,13 +25,21 @@ export default function ToolBox() {
         <>
         <div className='w-fit fixed bottom-16 right-3 z-10'>
         <div className="w-40 h-40 relative">
-            <div className={"w-12 h-12 bg-primary flex flex-col justify-center items-center text-center rounded-full absolute right-0 bottom-0 ease-in-out duration-150" + show}>
+            <Link to="/qrscanner">
+            <div className={"w-12 h-12 bg-primary flex flex-col justify-center items-center text-center rounded-full absolute right-0 bottom-0 ease-in-out duration-150" + show}
+            onClick={showMenu}
+            >
                 <BsQrCode className="text-3xl text-secondary"/>
             </div>
-            <div className={"w-12 h-12 bg-primary flex flex-col justify-center items-center text-center rounded-full absolute right-0 bottom-0 ease-in-out duration-150" + show2}>
+            </Link>
+            <div className={"w-12 h-12 bg-primary flex flex-col justify-center items-center text-center rounded-full absolute right-0 bottom-0 ease-in-out duration-150" + show2}
+            onClick={showMenu}
+            >
                 <BsGift className="text-3xl text-secondary"/>
             </div>
-            <div className={"w-12 h-12 bg-primary flex flex-col justify-center items-center text-center rounded-full absolute bottom-0 right-0 ease-in-out duration-150" + show3}>
+            <div className={"w-12 h-12 bg-primary flex flex-col justify-center items-center text-center rounded-full absolute bottom-0 right-0 ease-in-out duration-150" + show3}
+            onClick={showMenu}
+            >
                 <BiMessageRounded className="text-3xl text-secondary"/>
             </div>
             <div 
