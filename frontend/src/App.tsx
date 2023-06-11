@@ -1,12 +1,12 @@
-import "./App.css";
-import Gift from "./components/Gift";
+import Events from './pages/Events';
+
 
 function App() {
 
   return (
     <>
       {/* <div className="w-200 h-200 bg-secondary"></div> */}
-      <Gift />
+      <Events/>
     </>
   );
 }
