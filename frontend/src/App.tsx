@@ -1,16 +1,19 @@
 import "./App.css";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import MainLayout from "./layouts/MainLayout";
+import Home from "./pages/Home";
 
 function App() {
 
   return (
-    <>
-      <div className="bg-secondary">
-        <h1 className="">Hello World</h1>
-        <div>
-          <button className="">Click Me</button>
-        </div>
-      </div>
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<MainLayout />}>
+          <Route index element={<Home />} />
+          {/* <Route path="favorite" element={<Favorite />} /> */}
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
 
